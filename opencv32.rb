@@ -36,7 +36,6 @@ class Opencv3 < Formula
   deprecated_option "with-qt5" => "with-qt"
 
   option "with-contrib", 'Build "extra" contributed modules'
-  option "with-cuda", "Build with CUDA v7.0+ support"
   option "with-examples", "Install C and python examples (sources)"
   option "with-java", "Build with Java support"
   option "with-jpeg-turbo", "Build with libjpeg-turbo instead of libjpeg"
@@ -59,7 +58,6 @@ class Opencv3 < Formula
 
   depends_on :ant => :build if build.with? "java"
   depends_on "cmake" => :build
-  depends_on CudaRequirement => :optional
   depends_on "pkg-config" => :build
 
   depends_on "eigen" => :recommended
@@ -152,12 +150,6 @@ class Opencv3 < Formula
       args << "-DOPENCV_EXTRA_CXX_FLAGS='-arch i386 -m32'"
     end
 
-    if build.with? "cuda"
-      args << "-DWITH_CUDA=ON"
-      args << "-DCUDA_GENERATION=Auto"
-    else
-      args << "-DWITH_CUDA=OFF"
-    end
 
     if build.with? "contrib"
       resource("contrib").stage buildpath/"opencv_contrib"
