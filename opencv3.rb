@@ -1,5 +1,5 @@
 
-class Opencv32 < Formula
+class Opencv3 < Formula
   desc "Open source computer vision library, version 3.2"
   homepage "http://opencv.org/"
   revision 1
