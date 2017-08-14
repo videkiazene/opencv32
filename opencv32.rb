@@ -1,5 +1,5 @@
 
-class Opencv3 < Formula
+class Opencv32 < Formula
   desc "Open source computer vision library, version 3.2"
   homepage "http://opencv.org/"
   revision 1
@@ -29,7 +29,7 @@ class Opencv3 < Formula
     end
   end
 
-  keg_only "opencv3 and opencv install many of the same files"
+  keg_only "opencv32 and opencv install many of the same files"
 
   deprecated_option "without-tests" => "without-test"
   deprecated_option "32-bit" => "with-32-bit"
@@ -187,7 +187,7 @@ class Opencv3 < Formula
 
     if build.with?("python3") && build.with?("python")
       # Opencv3 Does not support building both Python 2 and 3 versions
-      odie "opencv3: Does not support building both Python 2 and 3 wrappers"
+      odie "opencv32: Does not support building both Python 2 and 3 wrappers"
     end
 
     if build.with? "python"
