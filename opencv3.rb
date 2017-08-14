@@ -6,7 +6,7 @@ class Opencv3 < Formula
 
   stable do
     url "https://github.com/opencv/opencv/archive/3.2.0.tar.gz"
-    sha256 "95029eb5578af3b20b8c7f8f6f59db1b827c2d5aaaa74b6becb1de647cbdda5a"
+    sha256 "b9d62dfffb8130d59d587627703d5f3e6252dce4a94c1955784998da7a39dd35"
 
     resource "contrib" do
       url "https://github.com/opencv/opencv_contrib/archive/3.2.0.tar.gz"
